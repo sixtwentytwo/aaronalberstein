@@ -1,0 +1,3660 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: TinyMCE Editor
+
+This stylesheet is loaded automatically by Wordpress when compiled
+and placed in the root theme directory folder as editor-style.css
+
+For more info, check out the codex:
+http://codex.wordpress.org/Editor_Style
+
+******************************************************************/
+/* Wrap the entire post style inside the TinyMCE selector, as suggested
+here http://codex.wordpress.org/Function_Reference/add_editor_style */
+/* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor {
+  /*! Made with Bones: http://themble.com/bones :) */
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+  /*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+  /* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+  /* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+  /**
+ * Correct `block` display not defined in IE 8/9.
+ */
+  /**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+  /**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+  /**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+  /* ==========================================================================
+   Base
+   ========================================================================== */
+  /**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+  /**
+ * Remove default margin.
+ */
+  /* ==========================================================================
+   Links
+   ========================================================================== */
+  /**
+ * Remove the gray background color from active links in IE 10.
+ */
+  /**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+  /**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+  /* ==========================================================================
+   Typography
+   ========================================================================== */
+  /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+  /**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+  /**
+ * Address differences between Firefox and other browsers.
+ */
+  /*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+*/
+  /*
+ * Addresses margins set differently in IE6/7.
+ */
+  /**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+  /**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+  /**
+ * Set consistent quote types.
+ */
+  /**
+ * Address inconsistent and variable font size in all browsers.
+ */
+  /**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+  /* ==========================================================================
+  Lists
+========================================================================== */
+  /*
+ * Addresses margins set differently in IE6/7.
+ */
+  /*
+ * Addresses paddings set differently in IE6/7.
+ */
+  /*
+ * Corrects list images handled incorrectly in IE7.
+ */
+  /* ==========================================================================
+  Embedded content
+========================================================================== */
+  /**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+  /**
+ * Correct overflow displayed oddly in IE 9.
+ */
+  /* ==========================================================================
+   Figures
+   ========================================================================== */
+  /**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+  /* ==========================================================================
+   Forms
+   ========================================================================== */
+  /**
+ * Define consistent border, margin, and padding.
+ */
+  /**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+  /**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+  /**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+  /**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+  /**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+  /**
+ * Re-set default cursor for disabled elements.
+ */
+  /**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+  /**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+  /**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+  /**
+ * Remove inner padding and border in Firefox 4+.
+ */
+  /**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+  /* ==========================================================================
+   Tables
+   ========================================================================== */
+  /**
+ * Remove most spacing between table cells.
+ */
+  /*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+  /*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+  /*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+  /*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+  /*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+  /*  @font-face {
+      font-family: 'Font Name';
+      src: url('/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/library/fonts/font-name.eot');
+      src: url('/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/library/fonts/font-name.eot#iefix') format('embedded-opentype'),
+             url('/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/library/fonts/font-name.woff') format('woff'),
+             url('/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/library/fonts/font-name.ttf') format('truetype'),
+             url('/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+  /*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+  /*********************
+TYPOGRAPHY
+*********************/
+  /*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+  /*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+  /*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+  /*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+  /*********************
+TRANSITION
+*********************/
+  /*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+  /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+  /* @include css-gradient(#dfdfdf,#f8f8f8); */
+  /*********************
+BOX SIZING
+*********************/
+  /* @include box-sizing(border-box); */
+  /* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+  /*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+  /* Portrait tablet to landscape */
+  /* Landscape to small desktop */
+  /*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+  /*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+Here's a quick video to show how it works:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+  /*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+*/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+  /*********************
+INPUTS
+*********************/
+  /*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+  /*********************
+GENERAL STYLES
+*********************/
+  /********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+  /* for sites that are read right to left (i.e. hebrew) */
+  /* home page */
+  /* blog template page */
+  /* archive page */
+  /* date archive page */
+  /* replace the number to the corresponding page number */
+  /* search page */
+  /* search result page */
+  /* no results search page */
+  /* individual paged search (i.e. body.search-paged-3) */
+  /* 404 page */
+  /* single post page */
+  /* individual post page by id (i.e. body.postid-73) */
+  /* individual paged single (i.e. body.single-paged-3) */
+  /* attatchment page */
+  /* individual attatchment page (i.e. body.attachmentid-763) */
+  /* style mime type pages */
+  /* author page */
+  /* user nicename (i.e. body.author-samueladams) */
+  /* paged author archives (i.e. body.author-paged-4) for page 4 */
+  /* category page */
+  /* individual category page (i.e. body.category-6) */
+  /* replace the number to the corresponding page number */
+  /* tag page */
+  /* individual tag page (i.e. body.tag-news) */
+  /* replace the number to the corresponding page number */
+  /* custom page template page */
+  /* individual page template (i.e. body.page-template-contact-php */
+  /* replace the number to the corresponding page number */
+  /* parent page template */
+  /* child page template */
+  /* replace the number to the corresponding page number */
+  /* if user is logged in */
+  /* paged items like search results or archives */
+  /* individual paged (i.e. body.paged-3) */
+  /*********************
+LAYOUT & GRID STYLES
+*********************/
+  /*********************
+LINK STYLES
+*********************/
+  /******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+  /*********************
+HEADER STYLES
+*********************/
+  /*********************
+NAVIGATION STYLES
+*********************/
+  /*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+  /* end .nav */
+  /*********************
+POSTS & CONTENT STYLES
+*********************/
+  /* end .hentry */
+  /* want to style individual post classes? Booya! */
+  /* post by id (i.e. post-3) */
+  /* general post style */
+  /* general article on a page style */
+  /* general style on an attatchment */
+  /* sticky post style */
+  /* hentry class */
+  /* style by category (i.e. category-videos) */
+  /* style by tag (i.e. tag-news) */
+  /* post meta */
+  /* entry content */
+  /* end .entry-content */
+  /* end .wp-caption */
+  /* image gallery styles */
+  /* end .gallery */
+  /* gallery caption styles */
+  /******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+  /* end .bones_page_navi */
+  /* fallback previous & next links */
+  /* end .wp-prev-next */
+  /******************************************************************
+COMMENT STYLES
+******************************************************************/
+  /* h3 comment title */
+  /* comment meta */
+  /* comment content */
+  /* end .commentlist .comment_content */
+  /* comment reply link */
+  /* end .commentlist .comment-reply-link */
+  /* edit comment link */
+  /******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+  /* comment submit button */
+  /* comment form title */
+  /* cancel comment reply link */
+  /* logged in comments */
+  /* allowed tags */
+  /* no comments */
+  /*********************
+SIDEBARS & ASIDES
+*********************/
+  /*********************
+FOOTER STYLES
+*********************/
+  /*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+  /* end .footer-links */
+  /*********************
+Contact Page STYLES
+*********************/
+  /*********************
+Woo
+*********************/
+  /*********************
+/Woo
+*********************/
+  /*********************
+RESUME
+*********************/
+  /*********************
+END RESUME
+*********************/
+  /* image gallery styles */
+  /****
+VIDEOS
+***/
+  /***
+END VIDEOS
+***/
+  /*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+  /*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+  /*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+  /*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+  /*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+  /*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+  width: 731px;
+  font-family: "Lato", "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  /*********************
+	LINK STYLES
+	*********************/
+  /******************************************************************
+	H1, H2, H3, H4, H5 STYLES
+	******************************************************************/
+  padding: 1.5em 1.5em 0;
+  /*********************
+		LARGER MOBILE DEVICES
+		This is for devices like the Galaxy Note or something that's
+		larger than an iPhone but smaller than a tablet. Let's call them
+		tweeners.
+		*********************/
+}
+
+/* line 12, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor article,
+body#tinymce.wp-editor aside,
+body#tinymce.wp-editor details,
+body#tinymce.wp-editor figcaption,
+body#tinymce.wp-editor figure,
+body#tinymce.wp-editor footer,
+body#tinymce.wp-editor header,
+body#tinymce.wp-editor hgroup,
+body#tinymce.wp-editor main,
+body#tinymce.wp-editor nav,
+body#tinymce.wp-editor section,
+body#tinymce.wp-editor summary {
+  display: block;
+  clear: both;
+}
+
+/* line 32, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor audio,
+body#tinymce.wp-editor canvas,
+body#tinymce.wp-editor video {
+  display: inline-block;
+}
+
+/* line 43, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 53, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor [hidden],
+body#tinymce.wp-editor template {
+  display: none;
+}
+
+/* line 68, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* line 78, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor body {
+  margin: 0;
+}
+
+/* line 90, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor a {
+  background: transparent;
+}
+
+/* line 98, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor a:focus {
+  outline: 0px dotted;
+}
+
+/* line 106, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor a:active,
+body#tinymce.wp-editor a:hover {
+  outline: 0;
+}
+
+/* line 120, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 129, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor abbr[title] {
+  border-bottom: 0px dotted;
+}
+
+/* line 137, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor b,
+body#tinymce.wp-editor strong,
+body#tinymce.wp-editor .strong {
+  font-weight: bold;
+}
+
+/* line 147, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor dfn,
+body#tinymce.wp-editor em,
+body#tinymce.wp-editor .em {
+  font-style: italic;
+}
+
+/* line 157, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+/* line 167, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor p {
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
+}
+
+/* line 178, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor pre {
+  margin: 0;
+}
+
+/* line 186, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor code,
+body#tinymce.wp-editor kbd,
+body#tinymce.wp-editor pre,
+body#tinymce.wp-editor samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 198, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor pre {
+  white-space: pre-wrap;
+}
+
+/* line 206, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 213, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor q:before,
+body#tinymce.wp-editor q:after {
+  content: '';
+  content: none;
+}
+
+/* line 219, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor small, body#tinymce.wp-editor .small {
+  font-size: 75%;
+}
+
+/* line 227, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor sub,
+body#tinymce.wp-editor sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 235, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor sup {
+  top: -0.5em;
+}
+
+/* line 239, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor sub {
+  bottom: -0.25em;
+}
+
+/* line 251, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor dl,
+body#tinymce.wp-editor menu,
+body#tinymce.wp-editor ol,
+body#tinymce.wp-editor ul {
+  margin: 1em 0;
+}
+
+/* line 258, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor dd {
+  margin: 0;
+}
+
+/* line 266, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor menu {
+  padding: 0 0 0 40px;
+}
+
+/* line 270, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor ol,
+body#tinymce.wp-editor ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 280, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor nav ul,
+body#tinymce.wp-editor nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 294, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor img {
+  border: 0;
+}
+
+/* line 302, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 314, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor figure {
+  margin: 0;
+}
+
+/* line 326, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 337, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/* line 348, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button,
+body#tinymce.wp-editor input,
+body#tinymce.wp-editor select,
+body#tinymce.wp-editor textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/* line 362, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button,
+body#tinymce.wp-editor input {
+  line-height: normal;
+}
+
+/* line 374, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button,
+body#tinymce.wp-editor select {
+  text-transform: none;
+}
+
+/* line 387, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button,
+body#tinymce.wp-editor html input[type="button"],
+body#tinymce.wp-editor input[type="reset"],
+body#tinymce.wp-editor input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/* line 399, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button[disabled],
+body#tinymce.wp-editor html input[disabled] {
+  cursor: default;
+}
+
+/* line 409, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor input[type="checkbox"],
+body#tinymce.wp-editor input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/* line 421, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/* line 433, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor input[type="search"]::-webkit-search-cancel-button,
+body#tinymce.wp-editor input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 442, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor button::-moz-focus-inner,
+body#tinymce.wp-editor input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 453, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* line 466, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 473, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 480, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor .image-replacement,
+body#tinymce.wp-editor .ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* line 488, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor .clearfix, body#tinymce.wp-editor .cf, body#tinymce.wp-editor .comment-respond {
+  zoom: 1;
+}
+
+/* line 490, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor .clearfix:before, body#tinymce.wp-editor .clearfix:after, body#tinymce.wp-editor .cf:before, body#tinymce.wp-editor .comment-respond:before, body#tinymce.wp-editor .cf:after, body#tinymce.wp-editor .comment-respond:after {
+  content: "";
+  display: table;
+}
+
+/* line 491, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor .clearfix:after, body#tinymce.wp-editor .cf:after, body#tinymce.wp-editor .comment-respond:after {
+  clear: both;
+}
+
+/* line 498, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_normalize.scss */
+body#tinymce.wp-editor span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+@font-face {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    font-family: 'Futura Today Demi';
+    src: url("/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/fonts/futura_today_demibold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@font-face {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    font-family: 'Futura Today Light';
+    src: url("/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/fonts/futura_today_light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@font-face {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    font-family: 'Futura Today Normal';
+    src: url("/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/fonts/futura_today_normal.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+/* line 89, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_typography.scss */
+body#tinymce.wp-editor p {
+  -ms-word-wrap: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/* line 35, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+body#tinymce.wp-editor .last-col {
+  float: right;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+  /* line 49, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+  /* line 55, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+  /* line 60, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+  /* line 65, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+  /* line 70, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+  /* line 75, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+  /* line 80, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+  /* line 85, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+  /* line 90, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+  /* line 95, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+  /* line 100, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%;
+  }
+  /* line 105, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%;
+  }
+  /* line 110, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%;
+  }
+  /* line 115, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%;
+  }
+  /* line 120, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%;
+  }
+  /* line 125, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%;
+  }
+  /* line 130, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%;
+  }
+  /* line 135, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%;
+  }
+  /* line 140, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%;
+  }
+  /* line 145, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%;
+  }
+  /* line 150, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%;
+  }
+  /* line 155, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .m-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1029px) {
+  /* line 166, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+  /* line 172, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+  /* line 177, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+  /* line 182, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+  /* line 187, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+  /* line 192, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+  /* line 197, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+  /* line 202, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+  /* line 207, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+  /* line 212, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+  /* line 217, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%;
+  }
+  /* line 222, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%;
+  }
+  /* line 227, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%;
+  }
+  /* line 232, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%;
+  }
+  /* line 237, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%;
+  }
+  /* line 242, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%;
+  }
+  /* line 247, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%;
+  }
+  /* line 252, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%;
+  }
+  /* line 257, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%;
+  }
+  /* line 262, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%;
+  }
+  /* line 267, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%;
+  }
+  /* line 272, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .t-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%;
+  }
+}
+
+@media (min-width: 1030px) {
+  /* line 282, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+  /* line 288, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+  /* line 293, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+  /* line 298, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+  /* line 303, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+  /* line 308, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+  /* line 313, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+  /* line 318, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+  /* line 323, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+  /* line 328, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+  /* line 333, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%;
+  }
+  /* line 338, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%;
+  }
+  /* line 343, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%;
+  }
+  /* line 348, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%;
+  }
+  /* line 353, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%;
+  }
+  /* line 358, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%;
+  }
+  /* line 363, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%;
+  }
+  /* line 368, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%;
+  }
+  /* line 373, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%;
+  }
+  /* line 378, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%;
+  }
+  /* line 383, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.09090909091%;
+  }
+  /* line 388, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_grid.scss */
+  body#tinymce.wp-editor .d-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%;
+  }
+}
+
+/* line 15, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_alerts.scss */
+body#tinymce.wp-editor .alert-help, body#tinymce.wp-editor .alert-info, body#tinymce.wp-editor .alert-error, body#tinymce.wp-editor .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+/* line 21, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_alerts.scss */
+body#tinymce.wp-editor .alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+/* line 27, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_alerts.scss */
+body#tinymce.wp-editor .alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+/* line 33, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_alerts.scss */
+body#tinymce.wp-editor .alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+/* line 39, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_alerts.scss */
+body#tinymce.wp-editor .alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/* line 27, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn, body#tinymce.wp-editor .comment-reply-link, body#tinymce.wp-editor #submit {
+  display: inline-block;
+  position: relative;
+  font-family: "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: normal;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.14s ease-in-out;
+}
+
+/* line 44, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .comment-reply-link:hover, body#tinymce.wp-editor #submit:hover, body#tinymce.wp-editor .blue-btn:focus, body#tinymce.wp-editor .comment-reply-link:focus, body#tinymce.wp-editor #submit:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 51, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn:active, body#tinymce.wp-editor .comment-reply-link:active, body#tinymce.wp-editor #submit:active {
+  top: 1px;
+}
+
+/* line 62, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn, body#tinymce.wp-editor .comment-reply-link, body#tinymce.wp-editor #submit {
+  background-color: #1DACD6;
+}
+
+/* line 66, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .comment-reply-link:hover, body#tinymce.wp-editor #submit:hover, body#tinymce.wp-editor .blue-btn:focus, body#tinymce.wp-editor .comment-reply-link:focus, body#tinymce.wp-editor #submit:focus {
+  background-color: #1b9ec4;
+}
+
+/* line 71, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_buttons.scss */
+body#tinymce.wp-editor .blue-btn:active, body#tinymce.wp-editor .comment-reply-link:active, body#tinymce.wp-editor #submit:active {
+  background-color: #1a9ac0;
+}
+
+/* line 24, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"],
+body#tinymce.wp-editor input[type="password"],
+body#tinymce.wp-editor input[type="datetime"],
+body#tinymce.wp-editor input[type="datetime-local"],
+body#tinymce.wp-editor input[type="date"],
+body#tinymce.wp-editor input[type="month"],
+body#tinymce.wp-editor input[type="time"],
+body#tinymce.wp-editor input[type="week"],
+body#tinymce.wp-editor input[type="number"],
+body#tinymce.wp-editor input[type="email"],
+body#tinymce.wp-editor input[type="url"],
+body#tinymce.wp-editor input[type="search"],
+body#tinymce.wp-editor input[type="tel"],
+body#tinymce.wp-editor input[type="color"],
+body#tinymce.wp-editor select,
+body#tinymce.wp-editor textarea,
+body#tinymce.wp-editor .field {
+  display: block;
+  height: 40px;
+  line-height: 1em;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  font-size: 1em;
+  color: #000;
+  border-radius: 3px;
+  vertical-align: middle;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Lato", "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
+}
+
+/* line 59, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"]:focus, body#tinymce.wp-editor input[type="text"]:active,
+body#tinymce.wp-editor input[type="password"]:focus,
+body#tinymce.wp-editor input[type="password"]:active,
+body#tinymce.wp-editor input[type="datetime"]:focus,
+body#tinymce.wp-editor input[type="datetime"]:active,
+body#tinymce.wp-editor input[type="datetime-local"]:focus,
+body#tinymce.wp-editor input[type="datetime-local"]:active,
+body#tinymce.wp-editor input[type="date"]:focus,
+body#tinymce.wp-editor input[type="date"]:active,
+body#tinymce.wp-editor input[type="month"]:focus,
+body#tinymce.wp-editor input[type="month"]:active,
+body#tinymce.wp-editor input[type="time"]:focus,
+body#tinymce.wp-editor input[type="time"]:active,
+body#tinymce.wp-editor input[type="week"]:focus,
+body#tinymce.wp-editor input[type="week"]:active,
+body#tinymce.wp-editor input[type="number"]:focus,
+body#tinymce.wp-editor input[type="number"]:active,
+body#tinymce.wp-editor input[type="email"]:focus,
+body#tinymce.wp-editor input[type="email"]:active,
+body#tinymce.wp-editor input[type="url"]:focus,
+body#tinymce.wp-editor input[type="url"]:active,
+body#tinymce.wp-editor input[type="search"]:focus,
+body#tinymce.wp-editor input[type="search"]:active,
+body#tinymce.wp-editor input[type="tel"]:focus,
+body#tinymce.wp-editor input[type="tel"]:active,
+body#tinymce.wp-editor input[type="color"]:focus,
+body#tinymce.wp-editor input[type="color"]:active,
+body#tinymce.wp-editor select:focus,
+body#tinymce.wp-editor select:active,
+body#tinymce.wp-editor textarea:focus,
+body#tinymce.wp-editor textarea:active,
+body#tinymce.wp-editor .field:focus,
+body#tinymce.wp-editor .field:active {
+  background-color: white;
+  outline: none;
+}
+
+/* line 66, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"].error, body#tinymce.wp-editor input[type="text"].is-invalid,
+body#tinymce.wp-editor input[type="password"].error,
+body#tinymce.wp-editor input[type="password"].is-invalid,
+body#tinymce.wp-editor input[type="datetime"].error,
+body#tinymce.wp-editor input[type="datetime"].is-invalid,
+body#tinymce.wp-editor input[type="datetime-local"].error,
+body#tinymce.wp-editor input[type="datetime-local"].is-invalid,
+body#tinymce.wp-editor input[type="date"].error,
+body#tinymce.wp-editor input[type="date"].is-invalid,
+body#tinymce.wp-editor input[type="month"].error,
+body#tinymce.wp-editor input[type="month"].is-invalid,
+body#tinymce.wp-editor input[type="time"].error,
+body#tinymce.wp-editor input[type="time"].is-invalid,
+body#tinymce.wp-editor input[type="week"].error,
+body#tinymce.wp-editor input[type="week"].is-invalid,
+body#tinymce.wp-editor input[type="number"].error,
+body#tinymce.wp-editor input[type="number"].is-invalid,
+body#tinymce.wp-editor input[type="email"].error,
+body#tinymce.wp-editor input[type="email"].is-invalid,
+body#tinymce.wp-editor input[type="url"].error,
+body#tinymce.wp-editor input[type="url"].is-invalid,
+body#tinymce.wp-editor input[type="search"].error,
+body#tinymce.wp-editor input[type="search"].is-invalid,
+body#tinymce.wp-editor input[type="tel"].error,
+body#tinymce.wp-editor input[type="tel"].is-invalid,
+body#tinymce.wp-editor input[type="color"].error,
+body#tinymce.wp-editor input[type="color"].is-invalid,
+body#tinymce.wp-editor select.error,
+body#tinymce.wp-editor select.is-invalid,
+body#tinymce.wp-editor textarea.error,
+body#tinymce.wp-editor textarea.is-invalid,
+body#tinymce.wp-editor .field.error,
+body#tinymce.wp-editor .field.is-invalid {
+  color: #fbe3e4;
+  border-color: #fbe3e4;
+  background-color: #fff;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
+  outline-color: #fbe3e4;
+}
+
+/* line 78, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"].success, body#tinymce.wp-editor input[type="text"].is-valid,
+body#tinymce.wp-editor input[type="password"].success,
+body#tinymce.wp-editor input[type="password"].is-valid,
+body#tinymce.wp-editor input[type="datetime"].success,
+body#tinymce.wp-editor input[type="datetime"].is-valid,
+body#tinymce.wp-editor input[type="datetime-local"].success,
+body#tinymce.wp-editor input[type="datetime-local"].is-valid,
+body#tinymce.wp-editor input[type="date"].success,
+body#tinymce.wp-editor input[type="date"].is-valid,
+body#tinymce.wp-editor input[type="month"].success,
+body#tinymce.wp-editor input[type="month"].is-valid,
+body#tinymce.wp-editor input[type="time"].success,
+body#tinymce.wp-editor input[type="time"].is-valid,
+body#tinymce.wp-editor input[type="week"].success,
+body#tinymce.wp-editor input[type="week"].is-valid,
+body#tinymce.wp-editor input[type="number"].success,
+body#tinymce.wp-editor input[type="number"].is-valid,
+body#tinymce.wp-editor input[type="email"].success,
+body#tinymce.wp-editor input[type="email"].is-valid,
+body#tinymce.wp-editor input[type="url"].success,
+body#tinymce.wp-editor input[type="url"].is-valid,
+body#tinymce.wp-editor input[type="search"].success,
+body#tinymce.wp-editor input[type="search"].is-valid,
+body#tinymce.wp-editor input[type="tel"].success,
+body#tinymce.wp-editor input[type="tel"].is-valid,
+body#tinymce.wp-editor input[type="color"].success,
+body#tinymce.wp-editor input[type="color"].is-valid,
+body#tinymce.wp-editor select.success,
+body#tinymce.wp-editor select.is-valid,
+body#tinymce.wp-editor textarea.success,
+body#tinymce.wp-editor textarea.is-valid,
+body#tinymce.wp-editor .field.success,
+body#tinymce.wp-editor .field.is-valid {
+  color: #e6efc2;
+  border-color: #e6efc2;
+  background-color: #fff;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==);
+  outline-color: #e6efc2;
+}
+
+/* line 90, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"][disabled], body#tinymce.wp-editor input[type="text"].is-disabled,
+body#tinymce.wp-editor input[type="password"][disabled],
+body#tinymce.wp-editor input[type="password"].is-disabled,
+body#tinymce.wp-editor input[type="datetime"][disabled],
+body#tinymce.wp-editor input[type="datetime"].is-disabled,
+body#tinymce.wp-editor input[type="datetime-local"][disabled],
+body#tinymce.wp-editor input[type="datetime-local"].is-disabled,
+body#tinymce.wp-editor input[type="date"][disabled],
+body#tinymce.wp-editor input[type="date"].is-disabled,
+body#tinymce.wp-editor input[type="month"][disabled],
+body#tinymce.wp-editor input[type="month"].is-disabled,
+body#tinymce.wp-editor input[type="time"][disabled],
+body#tinymce.wp-editor input[type="time"].is-disabled,
+body#tinymce.wp-editor input[type="week"][disabled],
+body#tinymce.wp-editor input[type="week"].is-disabled,
+body#tinymce.wp-editor input[type="number"][disabled],
+body#tinymce.wp-editor input[type="number"].is-disabled,
+body#tinymce.wp-editor input[type="email"][disabled],
+body#tinymce.wp-editor input[type="email"].is-disabled,
+body#tinymce.wp-editor input[type="url"][disabled],
+body#tinymce.wp-editor input[type="url"].is-disabled,
+body#tinymce.wp-editor input[type="search"][disabled],
+body#tinymce.wp-editor input[type="search"].is-disabled,
+body#tinymce.wp-editor input[type="tel"][disabled],
+body#tinymce.wp-editor input[type="tel"].is-disabled,
+body#tinymce.wp-editor input[type="color"][disabled],
+body#tinymce.wp-editor input[type="color"].is-disabled,
+body#tinymce.wp-editor select[disabled],
+body#tinymce.wp-editor select.is-disabled,
+body#tinymce.wp-editor textarea[disabled],
+body#tinymce.wp-editor textarea.is-disabled,
+body#tinymce.wp-editor .field[disabled],
+body#tinymce.wp-editor .field.is-disabled {
+  cursor: not-allowed;
+  border-color: #cfcfcf;
+  opacity: 0.6;
+}
+
+/* line 96, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="text"][disabled]:focus, body#tinymce.wp-editor input[type="text"][disabled]:active, body#tinymce.wp-editor input[type="text"].is-disabled:focus, body#tinymce.wp-editor input[type="text"].is-disabled:active,
+body#tinymce.wp-editor input[type="password"][disabled]:focus,
+body#tinymce.wp-editor input[type="password"][disabled]:active,
+body#tinymce.wp-editor input[type="password"].is-disabled:focus,
+body#tinymce.wp-editor input[type="password"].is-disabled:active,
+body#tinymce.wp-editor input[type="datetime"][disabled]:focus,
+body#tinymce.wp-editor input[type="datetime"][disabled]:active,
+body#tinymce.wp-editor input[type="datetime"].is-disabled:focus,
+body#tinymce.wp-editor input[type="datetime"].is-disabled:active,
+body#tinymce.wp-editor input[type="datetime-local"][disabled]:focus,
+body#tinymce.wp-editor input[type="datetime-local"][disabled]:active,
+body#tinymce.wp-editor input[type="datetime-local"].is-disabled:focus,
+body#tinymce.wp-editor input[type="datetime-local"].is-disabled:active,
+body#tinymce.wp-editor input[type="date"][disabled]:focus,
+body#tinymce.wp-editor input[type="date"][disabled]:active,
+body#tinymce.wp-editor input[type="date"].is-disabled:focus,
+body#tinymce.wp-editor input[type="date"].is-disabled:active,
+body#tinymce.wp-editor input[type="month"][disabled]:focus,
+body#tinymce.wp-editor input[type="month"][disabled]:active,
+body#tinymce.wp-editor input[type="month"].is-disabled:focus,
+body#tinymce.wp-editor input[type="month"].is-disabled:active,
+body#tinymce.wp-editor input[type="time"][disabled]:focus,
+body#tinymce.wp-editor input[type="time"][disabled]:active,
+body#tinymce.wp-editor input[type="time"].is-disabled:focus,
+body#tinymce.wp-editor input[type="time"].is-disabled:active,
+body#tinymce.wp-editor input[type="week"][disabled]:focus,
+body#tinymce.wp-editor input[type="week"][disabled]:active,
+body#tinymce.wp-editor input[type="week"].is-disabled:focus,
+body#tinymce.wp-editor input[type="week"].is-disabled:active,
+body#tinymce.wp-editor input[type="number"][disabled]:focus,
+body#tinymce.wp-editor input[type="number"][disabled]:active,
+body#tinymce.wp-editor input[type="number"].is-disabled:focus,
+body#tinymce.wp-editor input[type="number"].is-disabled:active,
+body#tinymce.wp-editor input[type="email"][disabled]:focus,
+body#tinymce.wp-editor input[type="email"][disabled]:active,
+body#tinymce.wp-editor input[type="email"].is-disabled:focus,
+body#tinymce.wp-editor input[type="email"].is-disabled:active,
+body#tinymce.wp-editor input[type="url"][disabled]:focus,
+body#tinymce.wp-editor input[type="url"][disabled]:active,
+body#tinymce.wp-editor input[type="url"].is-disabled:focus,
+body#tinymce.wp-editor input[type="url"].is-disabled:active,
+body#tinymce.wp-editor input[type="search"][disabled]:focus,
+body#tinymce.wp-editor input[type="search"][disabled]:active,
+body#tinymce.wp-editor input[type="search"].is-disabled:focus,
+body#tinymce.wp-editor input[type="search"].is-disabled:active,
+body#tinymce.wp-editor input[type="tel"][disabled]:focus,
+body#tinymce.wp-editor input[type="tel"][disabled]:active,
+body#tinymce.wp-editor input[type="tel"].is-disabled:focus,
+body#tinymce.wp-editor input[type="tel"].is-disabled:active,
+body#tinymce.wp-editor input[type="color"][disabled]:focus,
+body#tinymce.wp-editor input[type="color"][disabled]:active,
+body#tinymce.wp-editor input[type="color"].is-disabled:focus,
+body#tinymce.wp-editor input[type="color"].is-disabled:active,
+body#tinymce.wp-editor select[disabled]:focus,
+body#tinymce.wp-editor select[disabled]:active,
+body#tinymce.wp-editor select.is-disabled:focus,
+body#tinymce.wp-editor select.is-disabled:active,
+body#tinymce.wp-editor textarea[disabled]:focus,
+body#tinymce.wp-editor textarea[disabled]:active,
+body#tinymce.wp-editor textarea.is-disabled:focus,
+body#tinymce.wp-editor textarea.is-disabled:active,
+body#tinymce.wp-editor .field[disabled]:focus,
+body#tinymce.wp-editor .field[disabled]:active,
+body#tinymce.wp-editor .field.is-disabled:focus,
+body#tinymce.wp-editor .field.is-disabled:active {
+  background-color: #d5edf8;
+}
+
+/* line 106, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+/* line 111, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em;
+}
+
+/* line 118, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/modules/_forms.scss */
+body#tinymce.wp-editor select {
+  -webkit-appearance: none;
+  /* 1 */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAYAAADXhRcnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOEZCMjYxMEYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOEZCMjYxMUYwNUUxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ4RkIyNjBFRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ4RkIyNjBGRjA1RTExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vxkp9gAAAI9JREFUeNpidHFxucHAwKAOxE+AmJmBMPgLxDJAfJMFSKwD4kqoAClgA+P///8ZXF1dPaCGcBKh6QcQB+3evXs7WDMIAA2QB1I7gFgDj0aQFz2BGh+AOEwwUaDAQyBlCMR7cGjcC5KHaQQBuM3IAOiKTiBVhiTUDdRUhq4Oq2aoAelAahIQ5wM1zsCmBiDAADhYMJXVZ9u9AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: 97.5% center;
+}
+
+/* line 18, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor body {
+  font-family: "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif, "opensanslight", "cousine", "ralewayheavy", "ralewayregular", "ralewaythin";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  margin-top: 1em;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 75, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wrap {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* line 82, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .clients .wrap {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* line 93, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
+  color: #1990db;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+
+/* line 98, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
+  color: #39a5e8;
+}
+
+/* line 108, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
+  /*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 122, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */
+}
+
+/* line 129, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h1.product_title, body#tinymce.wp-editor .h1.product_title, body#tinymce.wp-editor h2.product_title, body#tinymce.wp-editor .h2.product_title, body#tinymce.wp-editor h3.product_title, body#tinymce.wp-editor .h3.product_title, body#tinymce.wp-editor h4.product_title, body#tinymce.wp-editor .h4.product_title, body#tinymce.wp-editor h5.product_title, body#tinymce.wp-editor .h5.product_title {
+  -webkit-filter: drop-shadow(-2px -2px 4px cyan) drop-shadow(2px 2px 4px cyan) drop-shadow(1px 1px 3px magenta) drop-shadow(-1px -1px 3px magenta) drop-shadow(1px 1px 2px white) drop-shadow(-1px -1px 2px white) drop-shadow(2px 0px 0px yellow) drop-shadow(-2px 0px 0px yellow) drop-shadow(0px -3px 0px lime) drop-shadow(0px 3px 0px lime);
+  text-transform: uppercase;
+  zoom: 1.5;
+}
+
+/* line 147, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h1 a, body#tinymce.wp-editor .h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor .h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor .h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor .h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor .h5 a {
+  text-decoration: none;
+}
+
+/* line 152, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+/* line 157, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+/* line 163, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3 {
+  font-size: 1.125em;
+}
+
+/* line 167, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 172, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 186, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #logo {
+  margin: 0;
+  font-family: 'Futura Today Demi', sans-serif;
+  text-align: center;
+}
+
+/* line 218, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav {
+  border: 0px solid #ccc;
+  border-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+
+/* line 223, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav#menu-social li {
+  font-family: "Social", sans-serif;
+}
+
+/* line 227, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav li {
+  font-family: "Futura Today Demi", "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-right: .75em;
+  /*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+}
+
+/* line 231, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav li a {
+  display: block;
+  font-size: 1.25em;
+  text-decoration: none;
+  background-color: rgba(238, 238, 238, 0);
+  border-bottom: 0px solid #ccc;
+  /*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+}
+
+/* line 251, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav li:last-child {
+  padding-right: 0em;
+}
+
+/* line 253, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav li:last-child img {
+  max-width: calc(100% - 1em);
+}
+
+/* line 271, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nav li ul.sub-menu li a,
+body#tinymce.wp-editor .nav li ul.children li a {
+  padding-left: 30px;
+}
+
+/* line 305, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #menu-social img {
+  width: 64px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 315, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #content {
+  margin-top: 0em;
+}
+
+/* line 320, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .hentry {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+  padding: 0em;
+  border: 0px solid #ccc;
+}
+
+/* line 327, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .hentry header {
+  border-bottom: 0px solid #f8f9fa;
+  padding: 1.5em;
+}
+
+/* line 332, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .hentry footer {
+  padding: 1.5em;
+  border-top: 0px solid #f8f9fa;
+}
+
+/* line 336, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .hentry footer p {
+  margin: 0;
+}
+
+/* line 343, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .single-title,
+body#tinymce.wp-editor .page-title,
+body#tinymce.wp-editor .entry-title {
+  margin: 0;
+}
+
+/* line 368, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .byline {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* line 377, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content {
+  padding: 0em;
+  /*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+}
+
+/* line 380, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content p {
+  margin: 0 0 1.5em;
+}
+
+/* line 405, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content table {
+  width: 100%;
+  border: 1px solid #403e44;
+  margin-bottom: 1.5em;
+}
+
+/* line 410, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #9fa6b4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 419, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content tr {
+  border-bottom: 1px solid #403e44;
+}
+
+/* line 422, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* line 427, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content td {
+  padding: 0 7px;
+  border-right: 1px solid #403e44;
+}
+
+/* line 431, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content td:last-child {
+  border-right: 0;
+  padding-top: 0px;
+}
+
+/* line 438, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #403e44;
+  border-right: 1px solid #403e44;
+}
+
+/* line 443, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content th:last-child {
+  border-right: 0;
+}
+
+/* line 448, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #1DACD6;
+  font-style: italic;
+  color: #9fa6b4;
+}
+
+/* line 463, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+
+/* line 470, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content img {
+  height: auto;
+}
+
+/* line 472, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content img.alignright {
+  float: right;
+  max-width: 50%;
+}
+
+/* line 476, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content img.alignleft {
+  float: left;
+  max-width: 50%;
+}
+
+/* line 489, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content .alignright, body#tinymce.wp-editor .entry-content img.alignright {
+  margin: 0em;
+  border: #1990db solid 3px;
+}
+
+/* line 495, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content .size-auto,
+body#tinymce.wp-editor .entry-content .size-full,
+body#tinymce.wp-editor .entry-content .size-large,
+body#tinymce.wp-editor .entry-content .size-medium,
+body#tinymce.wp-editor .entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 504, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .entry-content pre {
+  background: #000;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* line 514, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+
+/* line 520, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* line 526, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* line 535, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .jp-carousel-info {
+  display: none;
+}
+
+/* line 539, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-3 dl.gallery-item {
+  width: 33.3333%;
+}
+
+/* line 544, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor dl.gallery-item {
+  float: left;
+  padding: 0em;
+}
+
+/* line 549, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery * {
+  line-height: 0em;
+}
+
+/* line 554, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery {
+  line-height: 0em;
+  margin: 0;
+}
+
+/* line 559, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery dl {
+  margin: 0;
+}
+
+/* line 564, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery dl img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto;
+  margin: 0;
+}
+
+/* line 577, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery dt {
+  margin: 0;
+}
+
+/* line 580, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery dd {
+  margin: 0;
+}
+
+/* line 594, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .tags {
+  margin: 0;
+}
+
+/* line 605, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination,
+body#tinymce.wp-editor .wp-prev-next {
+  margin: 1.5em 0;
+}
+
+/* line 609, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination {
+  text-align: center;
+}
+
+/* line 612, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination ul {
+  display: inline-block;
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+
+/* line 621, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid #403e44;
+}
+
+/* line 630, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination a, body#tinymce.wp-editor .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #1DACD6;
+}
+
+/* line 642, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination a:hover, body#tinymce.wp-editor .pagination a:focus, body#tinymce.wp-editor .pagination span:hover, body#tinymce.wp-editor .pagination span:focus {
+  background-color: #1DACD6;
+  color: #fff;
+}
+
+/* line 648, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination .current {
+  cursor: default;
+  color: #000;
+}
+
+/* line 652, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .pagination .current:hover, body#tinymce.wp-editor .pagination .current:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+/* line 665, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wp-prev-next .prev-link {
+  float: left;
+}
+
+/* line 669, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .wp-prev-next .next-link {
+  float: right;
+}
+
+/* line 680, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #f8f9fa;
+  /* number of comments span */
+}
+
+/* line 700, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .commentlist {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 705, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #f8f9fa;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */
+}
+
+/* line 712, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .comment-author {
+  padding: 7px;
+  border: 0;
+}
+
+/* line 718, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard {
+  margin-left: 50px;
+}
+
+/* line 721, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* line 729, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard time {
+  display: block;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* line 734, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard time a {
+  color: #9fa6b4;
+  text-decoration: none;
+}
+
+/* line 738, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard time a:hover {
+  text-decoration: underline;
+}
+
+/* line 748, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .vcard .avatar {
+  position: absolute;
+  left: 16px;
+  border-radius: 50%;
+}
+
+/* line 756, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment:last-child {
+  margin-bottom: 0;
+}
+
+/* line 760, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment .children {
+  margin: 0;
+  /* variations */
+  /* change number for different depth */
+}
+
+/* line 778, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment[class*=depth-] {
+  margin-top: 1.1em;
+}
+
+/* line 782, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* line 787, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment:not(.depth-1) {
+  margin-top: 0;
+  margin-left: 7px;
+  padding: 7px;
+}
+
+/* line 800, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment.odd {
+  background-color: #fff;
+}
+
+/* line 803, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment.even {
+  background: #f8f9fa;
+}
+
+/* line 837, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 846, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment-reply-link {
+  font-size: 0.9em;
+  float: right;
+}
+
+/* line 858, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/* line 871, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment-respond {
+  padding: 1.5em;
+  border-top: 1px solid #f8f9fa;
+}
+
+/* line 877, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #reply-title {
+  margin: 0;
+}
+
+/* line 881, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .logged-in-as {
+  color: #9fa6b4;
+  font-style: italic;
+  margin: 0;
+}
+
+/* line 886, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .logged-in-as a {
+  color: #000;
+}
+
+/* line 891, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .comment-form-comment {
+  margin: 1.5em 0 0.75em;
+}
+
+/* line 895, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .form-allowed-tags {
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  font-size: 0.9em;
+}
+
+/* line 902, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #submit {
+  float: right;
+  font-size: 1em;
+}
+
+/* line 909, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* line 922, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* line 927, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/* line 943, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .widget ul li {
+  /* deep nesting */
+}
+
+/* line 966, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .footer {
+  clear: both;
+}
+
+/* line 993, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .primary-nav {
+  display: none;
+}
+
+/* line 996, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .primary-mobile-nav {
+  display: block;
+}
+
+/* line 999, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .top-nav {
+  display: none;
+}
+
+/* line 1004, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .onsale {
+  text-shadow: 10px 0px 7px yellow, -10px 0px 7px magenta, 0px -10px 7px cyan,  0px 10px 7px green !important;
+  background-color: black !important;
+  -webkit-box-shadow: 10px 0px 40px yellow,-10px 0px 40px magenta,0px 20px 30px cyan, 0px -10px 30px green !important;
+          box-shadow: 10px 0px 40px yellow,-10px 0px 40px magenta,0px 20px 30px cyan, 0px -10px 30px green !important;
+  color: #fff !important;
+  font-size: 2.857em !important;
+}
+
+/* line 1016, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .social-menu .twitter a {
+  background-image: url(/wp-content/themes/aaron2/library/images/twitter.svg);
+  height: 50px;
+  width: 50px;
+  color: transparent;
+}
+
+/* line 1022, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .social-menu .facebook a {
+  background-image: url(/wp-content/themes/aaron2/library/images/facebook.svg);
+  height: 50px;
+  width: 50px;
+  color: transparent;
+}
+
+/* line 1028, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .social-menu .instagram a {
+  background-image: url(/wp-content/themes/aaron2/library/images/instagram.svg);
+  height: 50px;
+  width: 50px;
+  color: transparent;
+}
+
+/* line 1035, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .social-menu li a {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+}
+
+/* line 1041, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #menu-social [data-icon], body#tinymce.wp-editor #menu-social [data-icon]:before {
+  text-shadow: 0px 0px 2px rgba(29, 172, 214, 0.75);
+}
+
+/* line 1045, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #inner-footer nav {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1051, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #inner-footer nav ul {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 1058, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor #inner-footer nav ul li {
+  width: calc( 100%/3);
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  float: left;
+}
+
+/* line 1072, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form .clear-form {
+  clear: both;
+}
+
+/* line 1077, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form select,
+body#tinymce.wp-editor .contact-form textarea,
+body#tinymce.wp-editor .contact-form input[type='text'],
+body#tinymce.wp-editor .contact-form input[type='email'],
+body#tinymce.wp-editor .contact-form input[type='radio'],
+body#tinymce.wp-editor .contact-form input[type='checkbox'] {
+  margin-bottom: 13px;
+}
+
+/* line 1087, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form textarea {
+  height: 10em !important;
+}
+
+/* line 1092, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form textarea,
+body#tinymce.wp-editor .contact-form input[type='radio'],
+body#tinymce.wp-editor .contact-form input[type='checkbox'] {
+  float: none;
+}
+
+/* line 1099, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form textarea,
+body#tinymce.wp-editor .contact-form input[type='text'],
+body#tinymce.wp-editor .contact-form input[type='email'],
+body#tinymce.wp-editor .textwidget input[type='text'],
+body#tinymce.wp-editor .textwidget input[type='email'],
+body#tinymce.wp-editor .textwidget textarea {
+  background-color: #f4fbfe !important;
+  border: 0px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* line 1114, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form label {
+  margin-bottom: 0px;
+  float: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* line 1115, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form label.checkbox, body#tinymce.wp-editor .contact-form label.radio {
+  margin-bottom: 3px;
+  float: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* line 1116, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .contact-form label span {
+  color: #AAA;
+  margin-left: 4px;
+  font-weight: normal;
+}
+
+/* line 1117, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .form-errors .form-error-message {
+  color: red;
+}
+
+/* line 1125, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor ul.products li {
+  border: 2px solid black;
+  margin: .05em !important;
+  padding: 0.2em !important;
+  border-radius: 4px;
+  text-transform: lowercase;
+}
+
+/* line 1139, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume h3, body#tinymce.wp-editor .home h3 {
+  margin-bottom: 0px;
+}
+
+/* line 1143, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume .entry-content, body#tinymce.wp-editor .home .entry-content {
+  padding: 0px;
+}
+
+/* line 1148, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume h3, body#tinymce.wp-editor .home h3 {
+  margin-bottom: 0px;
+}
+
+/* line 1151, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume .wrap, body#tinymce.wp-editor .home .wrap {
+  width: 8in;
+}
+
+/* line 1154, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume dd, body#tinymce.wp-editor .home dd {
+  display: none;
+}
+
+/* line 1158, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .printresume {
+  background-color: white;
+}
+
+/* line 1164, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume img, body#tinymce.wp-editor .home img {
+  margin-bottom: 0 !important;
+}
+
+/* line 1167, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume thead, body#tinymce.wp-editor .home thead {
+  display: none;
+}
+
+/* line 1170, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume td, body#tinymce.wp-editor .home td {
+  vertical-align: top;
+}
+
+/* line 1172, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume table, body#tinymce.wp-editor .home table {
+  background-color: white;
+  color: black;
+  margin: 0 !important;
+}
+
+/* line 1178, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume table, body#tinymce.wp-editor .resume td, body#tinymce.wp-editor .resume tr, body#tinymce.wp-editor .home table, body#tinymce.wp-editor .home td, body#tinymce.wp-editor .home tr {
+  border: 0 !important;
+}
+
+/* line 1181, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume tr td:first-child, body#tinymce.wp-editor .home tr td:first-child {
+  padding-left: 1em;
+}
+
+/* line 1184, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume tr td:last-child, body#tinymce.wp-editor .home tr td:last-child {
+  /* styles */
+}
+
+/* line 1191, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .resume td a {
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /* Force table to not be like tables anymore */
+  }
+  /* line 1198, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume {
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  /* line 1199, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume table, body#tinymce.wp-editor .resume thead, body#tinymce.wp-editor .resume tbody, body#tinymce.wp-editor .resume th, body#tinymce.wp-editor .resume td, body#tinymce.wp-editor .resume tr {
+    display: block;
+    text-align: left !important;
+    margin: 0 !important;
+    border-width: 0;
+  }
+  /* line 1207, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  /* line 1212, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume .credits tr:nth-of-type(even) {
+    background: #f8f9fa;
+  }
+  /* line 1216, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    padding: 0 1em 0 1em !important;
+    width: 100% !important;
+  }
+  /* line 1223, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume td * {
+    text-align: left !important;
+  }
+  /* line 1227, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+  body#tinymce.wp-editor .resume td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+
+/* line 1247, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+/* line 1251, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+/* line 1255, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-3 .gallery-item {
+  width: 33.333%;
+}
+
+/* line 1259, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .ie8 .gallery-columns-3 .gallery-item,
+body#tinymce.wp-editor .ie7 .gallery-columns-3 .gallery-item {
+  width: 33%;
+}
+
+/* line 1264, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+/* line 1268, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+/* line 1272, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-6 .gallery-item {
+  width: 16.665%;
+}
+
+/* line 1276, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-7 .gallery-item {
+  width: 14.285%;
+}
+
+/* line 1280, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+/* line 1284, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-columns-9 .gallery-item {
+  width: 11.111%;
+}
+
+/* line 1289, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .gallery-item {
+  float: left;
+  margin: 0;
+  text-align: center;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1305, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .videos .article-header, body#tinymce.wp-editor .videos .entry-content {
+  padding: 0;
+}
+
+/* line 1310, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor video, body#tinymce.wp-editor object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 1314, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .video-title {
+  font-size: .8em;
+}
+
+/* line 1318, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .ai1ec-posterboard-view .ai1ec-event-wrap {
+  background: transparent;
+}
+
+/* line 1321, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 1327, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_base.scss */
+body#tinymce.wp-editor .video-container iframe,
+body#tinymce.wp-editor .video-container object,
+body#tinymce.wp-editor .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 481px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+    /*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+    /*********************
+NAVIGATION STYLES
+*********************/
+    /* .menu is clearfixed inside mixins.scss */
+    /* end .menu */
+    /*********************
+POSTS & CONTENT STYLES
+*********************/
+    /* entry content */
+    /* end .entry-content */
+    /*********************
+FOOTER STYLES
+*********************/
+    /*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+    /* end .footer-links */
+  }
+  /* line 25, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .resume .wrap {
+    width: 100%;
+  }
+  /* line 35, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .menu {
+    /* end .menu ul */
+  }
+  /* line 36, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 37, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .menu ul li {
+    /*
+				plan your menus and drop-downs wisely.
+				*/
+  }
+  /* line 38, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .menu ul li a {
+    /*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+  }
+  /* line 83, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 84, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content p {
+    font-size: 1em;
+  }
+  /* line 87, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content p img {
+    margin: 0 0 1.5em 0;
+    max-width: 50%;
+    height: auto;
+  }
+  /* line 93, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content .alignleft, body#tinymce.wp-editor .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 98, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content .alignright, body#tinymce.wp-editor .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 103, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_481up.scss */
+  body#tinymce.wp-editor .entry-content .aligncenter, body#tinymce.wp-editor .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+    /*********************
+GENERAL STYLES
+*********************/
+    /*********************
+LAYOUT & GRID STYLES
+*********************/
+    /*********************
+HEADER STYLES
+*********************/
+    /*********************
+NAVIGATION STYLES
+*********************/
+    /* end .nav */
+    /*********************
+SIDEBARS & ASIDES
+*********************/
+    /* links widget */
+    /* meta widget */
+    /* pages widget */
+    /* recent-posts widget */
+    /* archives widget */
+    /* tag-cloud widget */
+    /* calendar widget */
+    /* category widget */
+    /* recent-comments widget */
+    /* search widget */
+    /* text widget */
+    /*********************
+FOOTER STYLES
+*********************/
+    /*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+    /* end .footer-links */
+  }
+  /* line 26, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .wrap {
+    max-width: 960px;
+  }
+  /* line 32, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .resume .wrap table {
+    max-width: 8in;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* line 52, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav {
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  /* line 54, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav ul {
+    background: transparent;
+    margin: 0;
+  }
+  /* line 58, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 0px 10px;
+    /*
+		plan your menus and drop-downs wisely.
+		*/
+    /* showing sub-menus */
+  }
+  /* line 65, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li a {
+    border-bottom: 0;
+    /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+  }
+  /* line 78, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li:first-child a {
+    padding-left: 0;
+  }
+  /* line 82, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li:last-child {
+    padding-right: 0px;
+  }
+  /* line 90, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li ul.sub-menu,
+  body#tinymce.wp-editor .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  /* line 99, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li ul.sub-menu li,
+  body#tinymce.wp-editor .nav li ul.children li {
+    /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+  }
+  /* line 101, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li ul.sub-menu li a,
+  body#tinymce.wp-editor .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  /* line 118, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li ul.sub-menu li:last-child a,
+  body#tinymce.wp-editor .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  /* line 128, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li ul.sub-menu li ul,
+  body#tinymce.wp-editor .nav li ul.children li ul {
+    top: 0;
+    left: 100%;
+  }
+  /* line 143, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .nav li:hover > ul {
+    top: auto;
+    visibility: visible;
+  }
+  /* line 163, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .sidebar {
+    margin-top: 2.2em;
+  }
+  /* line 167, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+  /* line 172, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  /* line 177, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  /* line 185, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+  /* line 293, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .footer-links ul li {
+    /*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+  }
+  /* line 306, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .top-nav {
+    display: block;
+    text-align: center;
+  }
+  /* line 310, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/breakpoints/_768up.scss */
+  body#tinymce.wp-editor .primary-mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+
+******************************************************************/
+    /* 
+
+EXAMPLE 
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(/wp-content/uploads/2017/12/wp-static-html-output-1-1514670796-aaron/wp-content/themes/aaron2/library/css/img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning 
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go. 
+
+*/
+  }
+}
+
+@media print {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Print Stylesheet
+
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. If you want to
+though, go for it.
+
+******************************************************************/
+  }
+  @page {
+    /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+    body#tinymce.wp-editor {
+      margin: 0in;
+    }
+  }
+  /* line 15, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .sharedaddy {
+    display: none;
+  }
+  /* line 18, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .video-container {
+    display: none;
+  }
+  /* line 20, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor video#bgvid {
+    display: none;
+  }
+  /* line 24, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .resume h1, body#tinymce.wp-editor .resume .h1, body#tinymce.wp-editor .resume h2, body#tinymce.wp-editor .resume .h2, body#tinymce.wp-editor .resume h3, body#tinymce.wp-editor .resume .h3, body#tinymce.wp-editor .resume h4, body#tinymce.wp-editor .resume .h4, body#tinymce.wp-editor .resume h5, body#tinymce.wp-editor .resume .h5 {
+    font-family: "Futura Today Bold", "Futura Today Light", "CodePro", "CodeProLight", "chunkfive", "walkway", "sofia", "josefin", "comforta", "corbert", "3dumb", "disco", "abril_fatface", "Helvetica Neue", Helvetica, Arial, sans-serif, "opensanslight", "cousine", "ralewayheavy", "ralewayregular", "ralewaythin";
+    text-transform: uppercase;
+    margin: .5em 0;
+    font-weight: 900;
+  }
+  /* line 31, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .resume .header, body#tinymce.wp-editor .resume .article-header, body#tinymce.wp-editor .footer, body#tinymce.wp-editor .noprint, body#tinymce.wp-editor .resume .gallery {
+    display: none;
+  }
+  /* line 34, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .resume table tr td:first-child {
+    padding-top: 0em !important;
+  }
+  /* line 37, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .resume table {
+    max-width: 8in;
+    max-height: 10in;
+  }
+  /* line 41, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor td {
+    vertical-align: top;
+    font-size: 11px;
+    padding-bottom: 0px !important;
+  }
+  /* line 47, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5 {
+    margin: 0px;
+  }
+  /* line 50, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor h3 {
+    margin-top: 12px;
+  }
+  /* line 53, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* line 61, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 76, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .ir a:after,
+  body#tinymce.wp-editor a[href^="javascript:"]:after,
+  body#tinymce.wp-editor a[href^="#"]:after {
+    content: "";
+  }
+  /* line 82, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor pre, body#tinymce.wp-editor blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /* line 87, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor thead {
+    display: table-header-group;
+  }
+  /* line 91, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor tr, body#tinymce.wp-editor img {
+    page-break-inside: avoid;
+  }
+  /* line 95, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor img {
+    max-width: 100% !important;
+  }
+  @page {
+    /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+    body#tinymce.wp-editor {
+      margin: 0.5cm;
+    }
+  }
+  /* line 103, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor p {
+    orphans: 3;
+    widows: 3;
+    margin-top: 0px;
+  }
+  /* line 109, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor h2,
+  body#tinymce.wp-editor h3 {
+    page-break-after: avoid;
+  }
+  /* line 115, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/partials/_print.scss */
+  body#tinymce.wp-editor .sidebar,
+  body#tinymce.wp-editor .page-navigation,
+  body#tinymce.wp-editor .wp-prev-next,
+  body#tinymce.wp-editor .respond-form,
+  body#tinymce.wp-editor nav {
+    display: none;
+  }
+}
+
+/* line 33, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
+  color: #1990db;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+}
+
+/* line 38, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
+  color: #39a5e8;
+}
+
+/* line 47, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 57, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+}
+
+/* line 60, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h1 a, body#tinymce.wp-editor .h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor .h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor .h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor .h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor .h5 a {
+  text-decoration: none;
+}
+
+/* line 65, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+/* line 70, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+/* line 76, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3 {
+  font-size: 1.125em;
+}
+
+/* line 80, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 85, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 94, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor p {
+  margin: 0 0 1.5em;
+}
+
+/* line 98, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor table {
+  width: 100%;
+  border: 1px solid #403e44;
+  margin-bottom: 1.5em;
+}
+
+/* line 103, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #9fa6b4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* line 112, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor tr {
+  border-bottom: 1px solid #403e44;
+}
+
+/* line 114, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* line 119, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor td {
+  padding: 7px;
+  border-right: 1px solid #403e44;
+}
+
+/* line 123, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor td:last-child {
+  border-right: 0;
+}
+
+/* line 128, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #403e44;
+  border-right: 1px solid #403e44;
+}
+
+/* line 133, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor th:last-child {
+  border-right: 0;
+}
+
+/* line 138, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor blockquote {
+  margin: 0 0 1.5em 0.75em;
+  padding: 0 0 0 0.75em;
+  border-left: 3px solid #1DACD6;
+  font-style: italic;
+  color: #9fa6b4;
+}
+
+/* line 149, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+
+/* line 156, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 162, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor .size-auto,
+body#tinymce.wp-editor .size-full,
+body#tinymce.wp-editor .size-large,
+body#tinymce.wp-editor .size-medium,
+body#tinymce.wp-editor .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 171, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+body#tinymce.wp-editor pre {
+  background: #000;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 481px) {
+  /* line 17, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 189, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor .alignleft, body#tinymce.wp-editor img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 194, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor .alignright, body#tinymce.wp-editor img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 200, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor .alignright.size-full, body#tinymce.wp-editor img.alignright.size-full {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+    max-width: 50%;
+  }
+  /* line 207, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor .alignleft.size-full, body#tinymce.wp-editor img.alignleft.size-full {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+    max-width: 50%;
+  }
+  /* line 213, Users/aaron/Desktop/work desktop/sixtwentytwo.github.io/aaron2/library/scss/editor-style.scss */
+  body#tinymce.wp-editor .aligncenter, body#tinymce.wp-editor img.aligncenter, body#tinymce.wp-editor .alignnone, body#tinymce.wp-editor img.alignnone {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+}
+/*# sourceMappingURL=editor-style.css.map */

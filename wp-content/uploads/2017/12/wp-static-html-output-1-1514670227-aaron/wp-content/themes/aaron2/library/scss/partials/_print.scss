@@ -1,0 +1,121 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Print Stylesheet
+
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. If you want to
+though, go for it.
+
+******************************************************************/
+@page {
+margin: 0in;
+}
+.sharedaddy{
+display: none;
+}
+.video-container {
+display: none; }
+video#bgvid {
+display: none;
+}
+.resume{
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+font-family: 'Futura Today Bold', $body;
+text-transform: uppercase;
+margin: .5em 0;
+font-weight: 900;
+}
+}
+.resume .header, .resume .article-header, .footer, .noprint, .resume .gallery {
+display: none;
+}
+.resume table tr td:first-child {
+padding-top: 0em !important;
+}
+.resume table{
+max-width: 8in;
+max-height: 10in;
+}
+td {
+vertical-align: top;
+font-size: 11px;
+padding-bottom: 0px !important;
+
+}
+h1, h2, h3, h4, h5{
+margin: 0px;
+}
+h3{
+margin-top: 12px;}
+
+* {
+background: transparent !important;
+color: black !important;
+text-shadow: none !important;
+filter:none !important;
+-ms-filter: none !important;
+}
+
+a, a:visited {
+color: #444 !important;
+text-decoration: underline;
+
+// show links on printed pages
+&:after {
+//      content: " (" attr(href) ")";
+}
+
+// show title too
+abbr[title]:after {
+//      content: " (" attr(title) ")";
+}
+}
+
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+content: "";
+}
+
+pre, blockquote {
+border: 1px solid #999;
+page-break-inside: avoid;
+}
+
+thead {
+display: table-header-group;
+}
+
+tr, img {
+page-break-inside: avoid;
+}
+
+img {
+max-width: 100% !important;
+}
+
+@page {
+margin: 0.5cm;
+}
+
+p{
+orphans: 3;
+widows: 3;
+margin-top: 0px;
+}
+
+h2,
+h3 {
+page-break-after: avoid;
+}
+
+// hide content people who print don't need to see
+.sidebar,
+.page-navigation,
+.wp-prev-next,
+.respond-form,
+nav {
+display: none;
+}
